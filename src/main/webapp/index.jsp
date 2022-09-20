@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Edu Namma Simple Maven Project</h2>
+<h2>singo singlela da varut</h2>
 </body>
 </html>
