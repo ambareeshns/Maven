@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>lets check approval</h2>
+<h2>manual approval works bob!</h2>
 </body>
 </html>
