@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>namma simple maven project!</h2>
+<h2>it works bob!</h2>
 </body>
 </html>
