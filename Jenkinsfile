@@ -1,5 +1,5 @@
 pipeline{
-      agent { label 'namma' }
+      agent any
       stages{
             stage('check out'){
                   steps{
