@@ -5,6 +5,7 @@ pipeline{
                   steps{
                         sh "rm -rf Maven"
                         sh "git clone https://github.com/anilpu3/Maven.git"
+			sh "apt install docker.io -y"
                   }
             }
             stage('build'){
