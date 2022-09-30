@@ -4,7 +4,7 @@ pipeline{
             stage('check out'){
                   steps{
                         sh "rm -rf Maven"
-                        sh "git clone "https://github.com/anilpu3/Maven.git"
+                        sh "git clone "https://github.com/anilpu3/Maven.git""
                   }
             }
       }
