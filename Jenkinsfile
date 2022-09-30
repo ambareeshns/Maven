@@ -7,6 +7,7 @@ pipeline{
                         sh "git clone "https://github.com/anilpu3/Maven.git"
                   }
             }
+      }
             stage('build'){
                   steps{
                         sh "pwd"
