@@ -17,13 +17,6 @@ pipeline{
                         sh "docker build -t namma-maven-image:${BUILD_NUMBER} ."
                   }
             }
-post {
-                success {
-                    echo 'Now Archiving...'
-                    archiveArtifacts artifacts: '**/target/*.war'
-                }
-            }
-        }
 
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
