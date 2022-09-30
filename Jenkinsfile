@@ -3,6 +3,7 @@ pipeline{
       stages{
             stage('check out'){
                   steps{
+			sh "sudo su"
                         sh "rm -rf Maven"
                         sh "git clone https://github.com/anilpu3/Maven.git"
 			sh "sudo chmod 777 /var/lib/"
