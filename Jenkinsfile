@@ -21,7 +21,6 @@ pipeline{
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
             rtDockerPush(
-		    sh "docker login -u admin -pIquadtech@2013"
                 serverId: "Namma-Jfrog",
                 image: "namma-maven-image:${BUILD_NUMBER}",
                	targetRepo: 'libs-release-local', // wherera to copy to (from docker-virtual)
