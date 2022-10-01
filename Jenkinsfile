@@ -17,29 +17,19 @@ pipeline{
                         sh "docker build -t namma-maven-image:${BUILD_NUMBER} ."
                   }
             }
- stage('Pushing Docker Image to Jfrog Artifactory') {
-            steps {
-                script {
-                    docker.withRegistry('https://vigneshsweekaran.jfrog.io', 'artifactory-credential') {
-                        docker.image("default-docker-local/hello-world:${TAG}").push()
-                        docker.image("default-docker-local/hello-world:${TAG}").push("latest")
-                    }
-                }
-            }
-        }
-/*	      
+
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
             rtDockerPush(
                 serverId: "Namma-Jfrog",
                 image: "namma-maven-image:${BUILD_NUMBER}",
-                host: 'tcp://172.17.0.1',
+                host: 'http://34.204.52.71:8082',
                 targetRepo: 'libs-release-local', // wherera to copy to (from docker-virtual)
                 // Attach custom properties to the published artifacts:
                 properties: 'project-name=namma-project;status=stable'
             )
         }
     }
-    */
+    
 }
 }
