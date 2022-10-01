@@ -17,7 +17,17 @@ pipeline{
                         sh "docker build -t namma-maven-image:${BUILD_NUMBER} ."
                   }
             }
-
+ stage('Pushing Docker Image to Jfrog Artifactory') {
+            steps {
+                script {
+                    docker.withRegistry('https://vigneshsweekaran.jfrog.io', 'artifactory-credential') {
+                        docker.image("default-docker-local/hello-world:${TAG}").push()
+                        docker.image("default-docker-local/hello-world:${TAG}").push("latest")
+                    }
+                }
+            }
+        }
+/*	      
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
             rtDockerPush(
@@ -30,5 +40,6 @@ stage ('Push image to Artifactory') { // take that image and push to artifactory
             )
         }
     }
+    */
 }
 }
