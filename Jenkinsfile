@@ -15,7 +15,7 @@ pipeline{
 		                  	sh 'mvn clean install -DskipTests'
                         sh "echo ${BUILD_NUMBER}"
                         sh "docker build -t namma-maven-image:${BUILD_NUMBER} ."
-			sh "docker login --username foo --password-stdin < jfrog_paswrd http://54.242.56.226:8082/artifactory/namma-project/"
+			// sh "docker login --username foo --password-stdin < jfrog_paswrd http://54.242.56.226:8082/artifactory/namma-project/"
                   }
             }
 
