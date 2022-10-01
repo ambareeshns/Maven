@@ -23,7 +23,7 @@ stage ('Push image to Artifactory') { // take that image and push to artifactory
             rtDockerPush(
                 serverId: "Namma-Jfrog",
                 image: "namma-maven-image:${BUILD_NUMBER}",
-                host: 'tcp://52.201.246.109:8082/',
+                //host: 'tcp://52.201.246.109:8082/',
                 targetRepo: 'libs-release-local', // where to copy to (from docker-virtual)
                 // Attach custom properties to the published artifacts:
                 properties: 'project-name=namma-project;status=stable'
