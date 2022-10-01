@@ -15,7 +15,7 @@ pipeline{
 		                  	sh 'mvn clean install -DskipTests'
                         sh "echo ${BUILD_NUMBER}"
                         sh "docker build -t namma-maven-image:${BUILD_NUMBER} ."
-			sh "curl -uadmin:Iquadtech@2013 -T namma-maven-image:${BUILD_NUMBER} \ "http://54.242.56.226:8082/artifactory/namma-project/namma-maven-image:${BUILD_NUMBER}"
+			sh "curl -uadmin:Iquadtech@2013 -T namma-maven-image:${BUILD_NUMBER} \ "http://54.242.56.226:8082/artifactory/namma-project/namma-maven-image:${BUILD_NUMBER}""
                   }
             }
 
