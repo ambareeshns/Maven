@@ -25,7 +25,7 @@ pipeline{
             		sh "docker push namma-maven-image:${BUILD_NUMBER}"
 }
 	      
-	      }	      
+	          
 /*
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
@@ -39,5 +39,6 @@ stage ('Push image to Artifactory') { // take that image and push to artifactory
         }
     }
    */ 
+}
 }
 }
