@@ -23,8 +23,8 @@ pipeline{
 steps {
 rtServer (
 id: "Namma-Jfrog", //given in the jenkins system config in under Jfrog in Id field
-url: 'http://localhost:8082/artifactory',
-//url: 'http://54.209.43.160:8082/artifactory',
+// url: 'http://localhost:8082/artifactory',
+url: 'http://54.209.43.160:8082/artifactory',
 username: 'admin',
 password: 'Iquadtech123',
 bypassProxy: true,
@@ -40,7 +40,7 @@ serverId: "Namma-Jfrog",
 spec: '''{
 "files": [
 {
-"pattern: "*.war"
+"pattern: "*ROOT.war"
 "target": "namma-project/" //repo created in Jfrog
 }
 ]
