@@ -41,4 +41,4 @@ stage ('Push image to Artifactory') { // take that image and push to artifactory
    */ 
 }
 }
-}
+
