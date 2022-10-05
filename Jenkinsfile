@@ -9,6 +9,7 @@ pipeline{
             }
             stage('build'){
                   steps{
+			sh "sudo chmod 777 /var/run/"  
                         sh "pwd"
                         sh "ls"
                         sh "cd Maven"
