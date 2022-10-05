@@ -40,8 +40,8 @@ serverId: "Namma-Jfrog",
 spec: '''{
 "files": [
 {
-"pattern: *.war"
-"target: namma-project/" //repo created in Jfrog
+"pattern": "*.war"
+"target": "namma-project/" //repo created in Jfrog
 }
 ]
 }''',
