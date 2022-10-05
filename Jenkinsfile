@@ -19,6 +19,35 @@ pipeline{
 		 // sh "docker login --username admin --password-stdin < jfrog_paswrd http://54.242.56.226:8082/artifactory/namma-project/"
                   }
             }
+	      stage ('Server') {
+steps {
+rtServer (
+id: "Namma-Jfrog", //given in the jenkins system config in under Jfrog in Id field
+url: 'http://localhost:8082/artifactory',
+//url: 'http://54.209.43.160:8082/artifactory',
+username: 'admin',
+password: 'Iquadtech123',
+bypassProxy: true,
+timeout: 300
+)
+}
+}
+
+stage('Upload') {
+steps{
+rtUpload (
+serverId: "Namma-Jfrog",
+spec: '''{
+"files": [
+{
+"pattern: "*.war"
+"target": "namma-project/" //repo created in Jfrog
+}
+]
+}''',
+)
+}
+}
 	   /*   stage('j frog push'){
 		      steps{
 	     withCredentials([gitUsernamePassword(credentialsId: 'jfrog', gitToolName: 'Default'), usernamePassword(credentialsId: 'namma-jfrog-passwrd', passwordVariable: 'jfrog_user_password', usernameVariable: 'jfrog_user_name')]) {
