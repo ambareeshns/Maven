@@ -18,7 +18,15 @@ pipeline{
 		 // sh "docker login --username admin --password-stdin < jfrog_paswrd http://54.242.56.226:8082/artifactory/namma-project/"
                   }
             }
-
+	      stage('j frog'){
+	     withCredentials([gitUsernamePassword(credentialsId: 'jfrog', gitToolName: 'Default'), usernamePassword(credentialsId: 'namma-jfrog-passwrd', passwordVariable: 'jfrog_user_password', usernameVariable: 'jfrog_user_name')]) {
+   			sh "docker login -u  ${jfrog_user_name} -p ${jfrog_user_password} 'http://54.209.43.160:8082/artifactory'"
+        
+            		sh "docker push namma-maven-image:${BUILD_NUMBER}"
+}
+	      
+	      
+/*
 stage ('Push image to Artifactory') { // take that image and push to artifactory
         steps {
             rtDockerPush(
@@ -30,6 +38,6 @@ stage ('Push image to Artifactory') { // take that image and push to artifactory
             )
         }
     }
-    
+   */ 
 }
 }
