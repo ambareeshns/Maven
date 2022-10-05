@@ -32,7 +32,7 @@ timeout: 300
 )
 }
 }
-
+ /* 
 stage('Upload') {
 steps{
 rtUpload (
@@ -47,7 +47,7 @@ spec: '''{
 }''',
 )
 }
-}
+}*/
 	   /*   stage('j frog push'){
 		      steps{
 	     withCredentials([gitUsernamePassword(credentialsId: 'jfrog', gitToolName: 'Default'), usernamePassword(credentialsId: 'namma-jfrog-passwrd', passwordVariable: 'jfrog_user_password', usernameVariable: 'jfrog_user_name')]) {
