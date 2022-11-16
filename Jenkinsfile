@@ -58,7 +58,7 @@ spec: '''{
 	      }	      
 	      }	   */        
 /*
-stage ('Push image to Artifactory') { // take that image and push to artifactory
+stage ('Push image to Artifactory') { /// take that image and push to artifactory
         steps {
             rtDockerPush(
                 serverId: "Namma-Jfrog",
