@@ -41,7 +41,7 @@ spec: '''{
 "files": [
 {
 "pattern": "*.war"
-"target": "namma-project/" //repo created in Jfrog
+"target": "namma-project/" ///repo created in Jfrog
 }
 ]
 }''',
