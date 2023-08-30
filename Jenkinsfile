@@ -7,7 +7,8 @@ pipeline{
                   }
             }
 	      stage('Build'){
-                  steps{			
+                  steps{	
+			sh "rm -rf maven"
                         sh "mvn package"				
                   }
             }
