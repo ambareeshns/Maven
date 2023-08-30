@@ -3,8 +3,7 @@ pipeline{
       stages{
             stage('check out'){
                   steps{			
-                        sh "rm -rf Maven"
-                        sh "https://github.com/ambareeshns/Maven.git"					
+                        sh "git clone https://github.com/ambareeshns/Maven.git"					
                   }
             }
            
