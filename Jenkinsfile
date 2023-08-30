@@ -2,13 +2,14 @@ pipeline{
       agent any
       stages{
             stage('check out'){
-                  steps{			
+                  steps{
+			sh "rm -rf Maven"
                         sh "git clone https://github.com/ambareeshns/Maven.git"					
                   }
             }
 	      stage('Build'){
                   steps{	
-			sh "rm -rf Maven"
+			
                         sh "mvn package"				
                   }
             }
