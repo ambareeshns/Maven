@@ -16,7 +16,7 @@ pipeline{
          stage('Tomcat-deploy'){
                   steps{	
 			
-                        sh "cd /var/lib/jenkins/workspace/namma-pipe/target/"
+                        sh "cd /var/lib/jenkins/workspace/namma-pipe/target"
 			sh "ls"
 			sh "docker build -t namma-image ."
                   }
