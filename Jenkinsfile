@@ -16,7 +16,7 @@ pipeline{
          stage('Tomcat-deploy'){
                   steps{	
 			
-                        sh "cp /var/lib/jenkins/workspace/namma-pipe/target/*.war /var/lib/tomcat9/webapps"				
+                        sh "sudo cp /var/lib/jenkins/workspace/namma-pipe/target/*.war /var/lib/tomcat9/webapps"				
                   }
             }  
 	}
