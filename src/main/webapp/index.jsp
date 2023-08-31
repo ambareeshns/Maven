@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>ANIL THANK you!</h2>
+<h2>ANIL THANK YOU!</h2>
 </body>
 </html>
