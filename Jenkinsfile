@@ -17,8 +17,8 @@ pipeline{
                   steps{	
 			
                         sh "cd /var/lib/jenkins/workspace/namma-pipe/target"
-			sh "ls"
 			sh "docker build -t namma-image ."
+			sh "docker rm -f port"
 			sh "docker run -d -p 8090:8080 namma-image"
                   }
             }  
